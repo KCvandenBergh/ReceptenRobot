@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recept Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Recept Chatbot</h1>
+    <form id="chatForm">
+        <label for="ingredients">Voer de ingrediënten in (gescheiden door komma's):</label><br>
+        <input type="text" id="ingredients" name="ingredients"><br>
+        <button id="submitBtn" type="submit">Verstuur</button>
+        <button id="cancelBtn" type="button">Annuleren</button>
+    </form>
+
+    <div id="chatHistory"></div>
+
+    <div id="response"></div>
+    <div id="error"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
