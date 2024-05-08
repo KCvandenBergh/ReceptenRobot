@@ -34,7 +34,7 @@ document.getElementById('chatForm').addEventListener('submit', async function (e
         chatHistory.push(data.content);
 
         // Update de chatgeschiedenis in de HTML
-        updateChatHistory();
+        // updateChatHistory();
 
         document.getElementById('response').innerText = data.content;
     } catch (error) {
@@ -46,17 +46,17 @@ document.getElementById('chatForm').addEventListener('submit', async function (e
     }
 });
 
-function updateChatHistory() {
-    const chatHistoryElement = document.getElementById('chatHistory');
-    chatHistoryElement.innerHTML = ''; // Leeg de huidige inhoud
+// function updateChatHistory() {
+//     const chatHistoryElement = document.getElementById('chatHistory');
+//     chatHistoryElement.innerHTML = ''; // Leeg de huidige inhoud
 
-    // Voeg elk bericht toe aan de chatgeschiedenis in de HTML
-    chatHistory.forEach(message => {
-        const messageElement = document.createElement('div');
-        messageElement.textContent = message;
-        chatHistoryElement.appendChild(messageElement);
-    });
-}
+//     // Voeg elk bericht toe aan de chatgeschiedenis in de HTML
+//     chatHistory.forEach(message => {
+//         const messageElement = document.createElement('div');
+//         messageElement.textContent = message;
+//         chatHistoryElement.appendChild(messageElement);
+//     });
+//}
 
 // Functie om het verzoek te annuleren
 function cancelAPICall() {
