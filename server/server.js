@@ -5,7 +5,6 @@ import cors from "cors";
 const app = express();
 const port = 3000;
 
-
 const model = new ChatOpenAI({
     temperature: 0.0,
     azureOpenAIApiKey: process.env.AZURE_OPENAI_API_KEY,
@@ -17,20 +16,27 @@ const model = new ChatOpenAI({
 
 app.use(cors());
 app.use(express.json());
+
+let chatHistory = []; // chatgeschiedenis bij houden
+
 app.post('/api/chat', async (req, res) => {
     try {
-        // de ingrediënten van de gebruiker 
         const { ingredients } = req.body;
 
-        // Voeg de ingrediënten samen in een bericht voor het model
+        // Voeg een nieuw bericht toe aan de chatgeschiedenis
+        chatHistory.push(["human", `Recept met ingrediënten: ${ingredients}`]);
+
+        // Voeg de chatgeschiedenis samen in een bericht voor het model
         const messages = [
             ["system", "Je bent een wereld chef met kennis van gerechten uit Caribbische, Afrikaanse en Aziatische landen."],
-            ["human", `Recept met ingrediënten: ${ingredients.join(', ')}`]
+            ...chatHistory // Voeg de chatgeschiedenis toe aan de messages array
         ];
 
         // Roep het model aan met het samengestelde bericht
         const result = await model.invoke(messages);
-        console.log()
+
+        // Voeg het antwoord van het model toe aan de chatgeschiedenis
+        chatHistory.push(["assistant", result.content]);
 
         // Stuur de reactie terug naar de frontend
         res.json({ content: result.content });
