@@ -47,5 +47,5 @@ app.post('/api/chat', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`De server draait op https://rr-service.onrender.com/`);
+    console.log(`De server draait op http://localhost:${port}`);
 });
