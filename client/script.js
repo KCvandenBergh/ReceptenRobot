@@ -22,7 +22,7 @@ document.getElementById('chatForm').addEventListener('submit', async function (e
             throw new Error('Voer ten minste één ingrediënt in.');
         }
 
-        const response = await fetch('http://localhost:3000/api/chat', {
+        const response = await fetch('https://rr-service.onrender.com/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
