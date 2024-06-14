@@ -23,12 +23,12 @@ document.getElementById('chatForm').addEventListener('submit', async function (e
         }
 
         const response = await fetch('https://rr-service.onrender.com/api/chat', {
+            mode: "cors",
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ ingredients }),
-            mode: "cors",
             signal: signal
         });
 
