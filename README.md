@@ -1,31 +1,31 @@
-Recept Chatbot Applicatie
+<h1>Recept Chatbot Applicatie</h1>
 Deze applicatie is een chatbot die gebruikers helpt recepten te vinden op basis van de ingevoerde ingrediënten. De server-side is gebouwd met Node.js en Express, en de client-side is een eenvoudige HTML/CSS/JavaScript interface.
-
+<b></b>
 De live versie van de applicatie is te bezoeken op: https://stud.hosted.hr.nl/1028100/client/.
-
-Installatie
+<b></b>
+<h1>Installatie</h1>
 Volg deze stappen om de applicatie lokaal op je machine te installeren en uit te voeren.
-
-Vereisten
+<b></b>
+<h2>Vereisten</h2>
 Node.js (v12 of hoger)
 npm (v6 of hoger)
-
-Stappen
-Clone de repository:
+<b></b>
+<h1>Stappen</h1>
+<h2></h2>Clone de repository:
 
 git clone <repository-url>
 cd <repository-directory>
-
+<b>
 Installeer de benodigde pakketten:
 npm install
+<b>
 
-
-Start de Server
-Voer de volgende opdracht uit om de server te starten:
+<h1>Start de Server</h1>
+<h2>Voer de volgende opdracht uit om de server te starten:</h2>
 npm start
 
-Gebruik
-Lokaal Gebruik:
+<h1>Gebruik</h1>
+<h2>Lokaal Gebruik:</h2>
 
 Start de server lokaal met npm start.
 Open de index.html file in je webbrowser vanuit de client map.
